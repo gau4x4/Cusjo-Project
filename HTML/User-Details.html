@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Details</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body ng-app="cjmUtilApp" ng-controller="cjmController" class="cjRootWrapper">
+    <main class="mainWrapper">
+        <header class="cjHeader">
+            <h2 class="cjMainHeading">Cusjo Assessment</h2>
+            <span class="cjMainMenu" ng-click="cjmShowMainModal()"></span>
+        </header>
+        <aside class="cjAside">
+            <h3 class="cjAsideHeading">Aside Content Goes Here</h3>
+        </aside>
+        <section class="cjSection">
+            <p class="cjMainContent">Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+        </section>
+        <footer class="cjFooter">
+            Copyright@Gaurav Pathak
+        </footer>
+    </main>
+   <div class="cjmWrapper" ng-show='cjmShow' >
+    <div class="cjMainModal">
+        <div class="cjmHeader">
+            <h2 class="cjmHeading">Utility Modal</h2>
+            <span class="cjmCloseIcon" title="Close"  ng-click="cjmHideModal()"></span>
+        </div>
+        <div class="cjmMainContainer">
+            <div class="cjmRow">
+                <div class="cjmCol">Change Area</div>
+                <div class="cjmCol">
+                    <select name="cjmChArea" id="cjmChAreaAtr" class="cjmSelect" ng-model="cjmSelector">
+                        <option value="AL">All</option>
+                        <option value="HE">Header</option>
+                        <option value="AS">Aside</option>
+                        <option value="MCN">Main Container</option>
+                        <option value="FT">Footer</option>
+                    </select>
+                </div>
+            </div>
+            <div class="cjmRow">
+                <div class="cjmCol">Change Font-size</div>
+                <div class="cjmCol">
+                    <input type="number" class="cjmInputBox" placeholder="Change Font By %age" ng-model="cjmFsize">
+                </div>
+            </div>
+            <div class="cjmRow">
+                <div class="cjmCol">Change Font-Family</div>
+                <div class="cjmCol">
+                    <select name="cjmFoFaml" id="cjmFoFam" class="cjmSelect" ng-model="cjmFoFamily">
+                        <option value="opensans">OpenSans</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Courier New">Courier</option>
+                    </select>
+                </div>
+            </div>
+            <div class="cjmRow">
+                <div class="cjmCol">Change Font-Color</div>
+                <div class="cjmCol">
+                    <select name="cjmFoColor" id="cjmChFoColor" class="cjmSelect" ng-model="cjmColor">
+                        <option value="Grey">Grey</option>
+                        <option value="Black">Black</option>
+                        <option value="White">White</option>
+                    </select>
+                </div>
+            </div>
+            <div class="cjmRow">
+                <div class="cjmCol">Change Language</div>
+                <div class="cjmCol">
+                    <select name="cjmLanAtr" id="cjmLanguage" class="cjmSelect" ng-model="cjmLangSel">
+                        <option value="HI">Hindi</option>
+                        <option value="EN">English</option>
+                        <option value="CN">Chinese</option>
+                    </select>
+                </div>
+            </div>
+             <div class="cjmRow">
+                <button class="cjmApplyBtn" ng-click="cjmApply()">Apply</button>
+            </div>
+        </div>
+        <div class="cjmFooter">
+            <button class="cjmCloseBtn" ng-click="cjmHideModal()">Close</button>
+        </div>
+    </div>
+   </div>
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>

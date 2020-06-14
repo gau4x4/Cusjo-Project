@@ -1,0 +1,382 @@
+@charset "utf-8";
+
+/*  CSS Document
+    Author:Gaurav Pathak
+    June-07-2020
+*/
+
+@font-face {
+    font-family: opensans;
+    src: url('font/OpenSans-Regular.eot');
+    src: url('font/OpenSans-Regular.eot?#iefix') format('embedded-opentype'), url('font/OpenSans-Regular.woff2') format('woff2'), url('font/OpenSans-Regular.woff') format('woff'), url('font/OpenSans-Regular.ttf') format('truetype'), url('font/OpenSans-Regular.svg#aileronregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: opensansBold;
+    src: url('font/OpenSans-Semibold.eot');
+    src: url('font/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'), url('font/OpenSans-Semibold.woff2') format('woff2'), url('font/OpenSans-Semibold.woff') format('woff'), url('font/OpenSans-Semibold.ttf') format('truetype'), url('font/OpenSans-Semibold.svg#aileronregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    font-family: opensans;
+    font-weight: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1;
+}
+
+input:focus {
+    outline: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+
+/* change colours to suit your needs */
+
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+
+/* change colours to suit your needs */
+
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* change border colour to suit your needs */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+.mainWrapper{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100px;
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.cjHeader{ 
+    display: flex;
+    align-items: center;
+    position: relative;
+    grid-column:1/3 ;
+    background-color: #ff0080;
+    padding: 20px;
+    max-height: 70px;
+    font: 22px/1 opensans;
+    color: #fff;
+}
+
+.cjAside,
+.cjSection{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: calc(100vh - 170px);
+    padding: 20px;
+}
+.cjAside{
+    grid-column: 1/2;
+}
+.cjSection{
+   
+    grid-column: 2/3;
+}
+.cjFooter{
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 100px;
+}
+.cjMainMenu{
+    position: absolute;
+    right: 20px;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwMCAxMDAiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48Zz48cG9seWdvbiBmaWxsPSIjMDEwMTAxIiBwb2ludHM9Ijc4LjEsNTEuNCA3OC4xLDc5LjIgMjIsNzkuMiAyMiwyNi41IDUwLjQsMjYuNSA1MC40LDI0LjUgMjAsMjQuNSAyMCw4MS4yIDgwLDgxLjIgODAsNTEuNCAgICA3OC4xLDUxLjQgICIvPjxwYXRoIGQ9Ik00Ny45LDM5LjhjLTAuNiwwLjYtMC45LDEuMi0wLjksMi4xYzAsMC44LDAuMywxLjUsMC45LDIuMWMwLjYsMC42LDEuMiwwLjksMi4xLDAuOWMwLjgsMCwxLjUtMC4zLDIuMS0wLjkgICBjMC42LTAuNiwwLjktMS4zLDAuOS0yLjFjMC0wLjktMC4zLTEuNi0wLjktMi4xYy0wLjYtMC42LTEuMy0wLjgtMi4xLTAuOEM0OS4yLDM4LjksNDguNiwzOS4yLDQ3LjksMzkuOHoiLz48cmVjdCBoZWlnaHQ9IjE1LjgiIHdpZHRoPSIzIiB4PSI0OS4yIiB5PSI1MC42Ii8+PC9nPjwvc3ZnPg==') no-repeat center;
+}
+.cjMainMenu:hover{
+    transform: scale(1.2);
+}
+.cjmWrapper{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left:0;
+    bottom:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.cjMainModal{
+    width: 320px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #fff;
+}
+.cjmHeader{
+    float: left;
+    clear: both;
+    width: 100%;
+    padding: 15px;
+    position: relative;
+}
+.cjmHeading{
+    font: 16px/1 opensans;
+    color: #333;
+}
+.cjmCloseIcon{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iNTEycHgiIGlkPSJMYXllcl8xIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgd2lkdGg9IjUxMnB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cGF0aCBkPSJNNDQzLjYsMzg3LjFMMzEyLjQsMjU1LjRsMTMxLjUtMTMwYzUuNC01LjQsNS40LTE0LjIsMC0xOS42bC0zNy40LTM3LjZjLTIuNi0yLjYtNi4xLTQtOS44LTRjLTMuNywwLTcuMiwxLjUtOS44LDQgIEwyNTYsMTk3LjhMMTI0LjksNjguM2MtMi42LTIuNi02LjEtNC05LjgtNGMtMy43LDAtNy4yLDEuNS05LjgsNEw2OCwxMDUuOWMtNS40LDUuNC01LjQsMTQuMiwwLDE5LjZsMTMxLjUsMTMwTDY4LjQsMzg3LjEgIGMtMi42LDIuNi00LjEsNi4xLTQuMSw5LjhjMCwzLjcsMS40LDcuMiw0LjEsOS44bDM3LjQsMzcuNmMyLjcsMi43LDYuMiw0LjEsOS44LDQuMWMzLjUsMCw3LjEtMS4zLDkuOC00LjFMMjU2LDMxMy4xbDEzMC43LDEzMS4xICBjMi43LDIuNyw2LjIsNC4xLDkuOCw0LjFjMy41LDAsNy4xLTEuMyw5LjgtNC4xbDM3LjQtMzcuNmMyLjYtMi42LDQuMS02LjEsNC4xLTkuOEM0NDcuNywzOTMuMiw0NDYuMiwzODkuNyw0NDMuNiwzODcuMXoiLz48L3N2Zz4=') no-repeat center /70%;
+}
+.cjmCloseBtn,.cjmApplyBtn{
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    transition: all ease-in-out 0.2s;
+}
+.cjmCloseBtn:hover,
+.cjmApplyBtn:hover{
+    opacity: 0.7;
+}
+.cjmApplyBtn{
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+.cjmFooter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+.cjmMainContainer{
+    float: left;
+    clear: both;
+    width: 100%;
+    padding: 15px 0;
+}
+.cjmRow{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+.cjmCol:first-child{
+    font: 13px/1 opensans;
+    color: #666;
+}
+.cjmCol:last-child{
+    margin-left: auto;
+}
+.cjmSelect{
+    padding:2px 10px;
+    color: #666;
+    height: 35px;
+    font: 13px/1 opensans;
+}
+.cjmInputBox{
+    font: 13px/1 opensans;
+    height: 35px;
+    color: #666;
+}
